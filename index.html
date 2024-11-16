@@ -9,27 +9,49 @@
         display: none;
       }
       input[type="radio"]:checked + label {
-        background-color: rgb(52, 206, 38);
-        color: rgb(245, 245, 245);
-        border-color: brown;
+        background-color:#2e2727;
+        color:#ccc;
+        border-color: #2e2727;
       }
       .radio label {
         display: inline-block;
         padding: 15px 30px;
         margin: 5px;
-        color: blue;
+        color:#2e2727;
         border: 2px solid #ccc;
         font-size: 20px;
-        background-color: bisque;
+        background-color:#ccc;
+        border-radius: 30px;
         cursor: pointer;
         transition: background-color 0.3s, color 0.3s;
+      }
+      select {
+        font-size: 20px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        padding: 2px;
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
+        color: #e4d6d6;
+      }
+      a {
+        color: #e4d6d6;
+      }
+      a:visited{
+        color: rgba(28, 11, 12, 0.662);
+      }
+      a:hover{
+        color: #817777;
+      }
+      button:hover {
+        color: #817777;
       }
     </style>
   </head>
   <body>
     <header
       style="
-        border: 3px solid black;
+        background-color: rgba(83, 27, 31, 0.662);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -51,52 +73,66 @@
           "
         />
       </section>
-      <section style="margin-right: 70px">Взрослым</section>
-      <section style="margin-right: 70px">Детям</section>
-      <section style="margin-right: 70px">Учителям</section>
-      <section style="margin-right: 70px">Другие курсы</section>
       <section style="margin-right: 70px">
-        <button
+            <select id="section-select" onchange="location = this.value">
+                <option value="#">Курсы</option>
+                <option value="#cost">Взрослые</option>
+                <option value="#cost">Дети</option>
+                <option value="#others">Языковые клубы</option>
+            </select>
+        </section>
+      <section style="margin-right: 70px">
+        <select id="section-select2" onchange="location = this.value">
+            <option value="#">О нас</option>
+            <option value="#team">Команда</option>
+            <option value="#success">Наши успехи</option>
+            <option value="#location">Локация</option>
+        </select>
+    </section>
+      <section style="margin-right: 70px; color: #e4d6d6;"><a href="#teachers">Учителям</a></section>
+      <section style="margin-right: 70px" color: #e4d6d6;><a href="#reviews">Отзывы</a></section>
+      <section style="margin-right: 70px">
+        <form action="https://github.com/konnomakotoo">
+        <button type="submit"
           style="
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
               sans-serif;
             font-size: 20px;
-            background-color: rgb(203, 213, 93);
+            background-color: #e4d6d6;;
             padding: 10px 20px;
             border: none;
             border-radius: 15px;
-            cursor: pointer;
-          "
+            cursor: pointer;"
         >
           Записаться на урок
         </button>
+    </form>
       </section>
     </header>
+    <div style="text-align: center; color: #2e2727; text-shadow: 2px 2px 2px rgb(181, 166, 166);">
+    <h1 style="font-weight: bold;">Лапки Лондона</h1>
+    <h2>Первая Школа Английского Языка Для Животных</h2>
+</div>
     <nav
       style="
-        border: 3px solid rgb(214, 25, 25);
+        background: linear-gradient(45%, #f1eeeeaf, #cbbbbbaf);
         display: flex;
-        justify-content: space-between;
+        justify-content:center;
       "
     >
-      <section style="flex: 0 0 800px">
+      <section style="flex: 0 0 700px">
         <img
-          src="https://bannerplus.ru/files/img/pics/smeshnye-kartinki-s-zhivotnymi-na-avu/smeshnye-kartinki-s-zhivotnymi-na-avu-35.webp"
-          alt=""
-          style="width: 100%; height: auto"
+          src="together1.jfif"
+          alt="happy together"
+          style="width: 100%; height: auto; border-radius: 33% 67% 33% 67% / 30% 72% 28% 70%; box-shadow: 5px 15px 20px rgba(0, 0, 0, 0.621);margin-right: 50px; margin-bottom: 50px; "
         />
       </section>
-      <section
-        style="
-          flex-grow: 1;
-          border: 1px solid black;
-          background-color: blue;
-          text-align: center;
-        "
-      >
-        <h2>Что будет на консультации?</h2>
+      <section>
+      <div style=" margin: 80px; border-radius: 50px; background-color: rgba(70, 58, 58, 0.717); padding: 20px; box-shadow: 2px 10px 15px black">
+        <div style="color: #dbd6d6; text-shadow: 2px 2px 2px black">
+        <h2 style="text-align: ;">Что будет на консультации?</h2>
         <section>
-          <ul style="list-style-position: inside">
+          <ul style="list-style-position: inside; padding: 10px;">
             <li>Определим ваш уровень языка</li>
             <li>Поможем выбрать мотивирующую цель</li>
             <li>Составим персональный план обучения</li>
@@ -106,6 +142,7 @@
           style="display: flex; flex-direction: column; align-items: center"
         >
           <h3>Запишитесь на консультацию</h3>
+        </div>
           <form action="https://github.com/konnomakotoo">
             <div class="radio">
               <input type="radio" id="adult" name="age" value="adult" />
@@ -147,51 +184,460 @@
               <button
                 type="submit"
                 style="
-                  padding: 10px;
+                  padding: 15px;
                   margin: 10px;
-                  background-color: rgb(223, 239, 47);
-                  border-radius: 15px;
+                  background-color:#dbd6d6;
+                  border-radius: 10px;
                   cursor: pointer;
-                "
-              >
+                  font-size: 15px;
+                  font-weight: bold;
+                ">
                 Хочу на консультацию
               </button>
             </div>
           </form>
         </section>
+    </div>
       </section>
     </nav>
-    <main style="border: 3px solid rgb(34, 201, 101)">
+    <main>
       <section>
-        <h1>Крутые преподы</h1>
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quo
-          quas hic laboriosam suscipit minima, id molestiae? Odio ipsa unde
-          culpa atque tempora tenetur error, minus rerum. Quis voluptatibus
-          assumenda esse ducimus quia architecto nesciunt eum. Quam corporis
-          aspernatur aliquam quibusdam iste voluptatem excepturi, exercitationem
-          modi vel dolorem. Iusto, explicabo.
+        <div style="text-align: center;">
+            <hr style="width: 50%; margin: 0 auto;">
+          </div>
+        <h1 style="text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin: 50px;" id="team">Крутые преподы</h1>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; justify-items: center; text-align: center;">
+            <div>
+          <img src="snake.jfif" alt="snake" width="400px" style="border-radius: 5px; box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.648);">
+          <p style="font-size: 20px; font-weight: bold; margin-bottom: 0;">
+            Змейка
+          </p>
+          <p style="font-size: 20px; margin: 2px;">
+            Преподаватель у взрослых учеников
+          </p>
+        </div>
+          <div>
+          <img src="elephant.jfif" alt="elephant" width="400px" style="border-radius: 5px; box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.648);">
+          <p style="font-size: 20px; font-weight: bold; margin-bottom: 0;">
+            Слоник
+          </p>
+          <p style="font-size: 20px; margin: 2px;">
+            Основатель школы
+          </p>
+        </div>
+          <div>
+          <img src="cat.jfif" alt="cat" width="400px" style="border-radius: 5px; box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.648);">
+          <p style="font-size: 20px; font-weight: bold; margin-bottom: 0;">
+            Котейка
+          </p>
+          <p style="font-size: 20px; margin: 2px 0 50px 0;">
+            Преподаватель у школьников
+          </p>
+        </div>
         </div>
       </section>
+      <div style="text-align: center;">
+      <hr style="width: 50%; margin: 0 auto;">
+    </div>
       <section>
-        <h1>Крутые дети</h1>
+        <h1 style="margin: 50px; text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" id="success">Крутые дети</h1>
+        <div style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        ">
+        <div style="
+           display:flex;
+           align-items: center;
+           justify-content: space-between;
+           border: 2px solid black;
+           border-radius: 30px;
+           padding: 0;
+           width: fit-content;
+           margin-bottom: 20px;
+           "
+           >
+            <div style="font-size: 20px; padding: 10px;">
+                Наши младшие школьники набрали<br> максимальные баллы в<br> линейке экзамена Cambridge!
+            </div>
+            <div>
+                <img src="cert1.jfif" alt="cambridge" style="border-radius: 30px; width: 400px; height: auto;">
+            </div>
+        </div>
+        <div style="
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 2px solid black;
+        border-radius: 30px;
+        padding: 0;
+        width: fit-content;
+        margin-bottom: 50px;
+        "
+        >
+         <div style="font-size: 20px; padding: 10px;">
+             Наши старшие школьники набрали<br> максимальные баллы в<br> линейке экзамена TOEFL!
+         </div>
+         <div>
+             <img src="cert2.jfif" alt="cambridge" style="border-radius: 30px; width: 400px; height: auto;">
+         </div>
+     </div>
+    </div>
       </section>
+      <div style="text-align: center;">
+        <hr style="width: 50%; margin: 0 auto;">
+      </div>
       <section>
-        <h1>Сертификаты</h1>
+        <h1 style="margin: 50px; text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" id="cost">Стоимость обучения</h1>
+        <div style="display: grid; 
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 5px;
+         justify-items: center;
+          text-align: center;
+          margin-bottom: 50px;
+          ">
+        <div style="display: flex; 
+        flex-direction: column;
+        border: 1px solid black;
+        width: fit-content;
+        padding: 10px;
+        border-radius: 20px;
+        font-size: 20px;
+        background-color: #968b8b;
+        color: #ccc;
+        text-shadow: 2px 2px 2px black;
+        ">
+            <div style="text-align: center; font-weight: bold;">
+                Взрослые
+            </div>
+            <div>
+                <ul style="list-style-type: square; list-style-position: inside">
+                    <li>Прокачаем профессиональный английский</li>
+                    <li>Подготовим к собеседованию</li>
+                    <li>Поможем получить оффер мечты</li>
+                    <li>Выведем на следующий языковой уровень</li>
+                </ul>
+            </div>
+            <div>
+            <div>от 100 листочков сосны <span style="font-size: 15px;">в месяц</span></div>
+            <div>
+                <form action="https://github.com/konnomakotoo">
+                <button type="submit" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+                sans-serif;
+              font-size: 20px;
+              background-color:#dbd6d6;
+              padding: 10px 20px;
+              border: none;
+              border-radius: 15px;
+              cursor: pointer;
+              margin: 10px;
+              ">
+              Записаться
+            </button>
+            </form>
+            </div>
+        </div>
+        </div>
+        <div style="display: flex; 
+        flex-direction: column;
+        border: 1px solid black;
+        width: fit-content;
+        padding: 10px;
+        border-radius: 20px;
+        font-size: 20px;
+        background-color: #968b8b;
+        color: #ccc;
+        text-shadow: 2px 2px 2px black;
+        ">
+            <div style="text-align: center; font-weight: bold;">
+                Дети
+            </div>
+            <div>
+                <ul style="list-style-type: square; list-style-position: inside">
+                    <li>Изучим грамматику играючи</li>
+                    <li>Погружаем в языковую среду</li>
+                    <li>Читаем увлекательные книги</li>
+                    <li>Сдаем первые международные экзамены</li>
+                </ul>
+            </div>
+            <div>
+            <div>от 70 листочков сосны <span style="font-size: 15px;">в месяц</span></div>
+            <div>
+                <form action="https://github.com/konnomakotoo">
+                <button type="submit" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+                sans-serif;
+              font-size: 20px;
+              background-color:#ccc;
+              padding: 10px 20px;
+              border: none;
+              border-radius: 15px;
+              cursor: pointer;
+              margin: 10px;
+              ">
+              Записаться
+            </button>
+            </form>
+            </div>
+        </div>
+        </div>
+        <div style="display: flex; 
+        flex-direction: column;
+        border: 1px solid black;
+        width: fit-content;
+        padding: 10px;
+        border-radius: 20px;
+        font-size: 20px;
+        background-color: #968b8b;
+        color: #ccc;
+        text-shadow: 2px 2px 2px black;
+        ">
+            <div style="text-align: center; font-weight: bold;">
+                Вместе
+            </div>
+            <div>
+                <ul style="list-style-type: square; list-style-position: inside">
+                    <li>Экономный тариф</li>
+                    <li>Одинаковое расписание</li>
+                    <li>Погружение в языковую среду</li>
+                    <li>Больше общения со своим ребенком</li>
+                </ul>
+            </div>
+            <div>
+            <div>от 140 листочков сосны <span style="font-size: 15px;">в месяц</span></div>
+            <div>
+                <form action="https://github.com/konnomakotoo">
+                <button type="submit" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+                sans-serif;
+              font-size: 20px;
+              background-color:#ccc;
+              padding: 10px 20px;
+              border: none;
+              border-radius: 15px;
+              cursor: pointer;
+              margin: 10px;
+              ">
+              Записаться
+            </button>
+            </form>
+            </div>
+        </div>
+        </div>
+    </div>
       </section>
+      <div style="text-align: center;">
+        <hr style="width: 50%; margin: 0 auto;">
+      </div>
       <section>
-        <h1>Мобильное приложение</h1>
+        <h1 style="margin: 50px; text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" id="others">Языковые клубы</h1>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; justify-items: center; text-align: center; margin-bottom: 50px;">
+            <div style="padding: 10px;">
+                <table border="1" 
+                style="width: 100%;
+                margin: 20px;
+                font-size: 18px;
+                text-align: center;
+                box-shadow: 0 4px 8px black;
+                ">
+                    <tr>
+                        <td><img src="https://goandstudycenter.ru/wp-content/uploads/2021/08/programmy-dlja-shkolnikov-i-studentov12.png" alt="it" width="120px" height="auto">
+                        </td>
+                        <td>Курс английского для IT</td>
+                        <td rowspan="4">88 листочков клена</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://englex.ru/app/uploads/business-course-main-d.webp" alt="business" width="100px" height="auto">
+                        </td>
+                        <td>Английский для бизнеса</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="https://online-london.com/upload/iblock/925/meiadyzkud0oojpkqcdmyfa32tohgifx/20.png" alt="market" width="120px" height="auto">
+                        </td>
+                        <td>Курс для маркетологов</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://static.tildacdn.one/tild3162-3661-4866-a638-333636353235/1.png" alt="pharmacy" width="100px" height="auto">
+                        </td>
+                        <td>Фармацевтам</td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <form action="https://github.com/konnomakotoo">
+                    <button type="submit" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+                    sans-serif;
+                  font-size: 20px;
+                  background-color:#ccc;
+                  padding: 10px 20px;
+                  border: none;
+                  border-radius: 15px;
+                  cursor: pointer;
+                  margin-top: 150px;
+                  ">
+                  ХОЧУ!
+                </button>
+                </form>
+            </div>
+            <div style="margin: 20px 35px 0;
+            box-shadow: 0 4px 8px black; 
+            ">
+                <img src="together2.jfif" alt="class" width="450" height="auto">
+            </div>
+        </div>
       </section>
+      <div style="text-align: center;">
+        <hr style="width: 50%; margin: 0 auto;">
+      </div>
       <section>
-        <h1>Курсы</h1>
+        <h1 style="margin: 50px; text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" id="teachers">Учителям</h1>
+        <div style="display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        position: relative;
+        margin-bottom: 50px;
+        ">
+            <div style="position: absolute;
+            transform: translateX;
+            z-index: 0;
+            opacity: 0.3;
+            ;
+            ">
+                <img src="dog.jfif" alt="dog" width="400px">
+            </div>
+            <div style="display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+            border: 2px solid black;
+            border-radius: 15px;
+            position: relative;
+            z-index: 1;
+            ">
+            <div style="font-size: 20px;">
+                <b>Ищем учителей!</b>
+            </div>
+            <div>
+                Бесплатные обеды и обнимашки!
+            </div>
+            <div style="font-size: 17px; text-shadow: 5px 5px 5px black;">
+                <div>
+                    Мы ищем тех, кто:
+                </div>
+                <ul>
+                    <li>Не кусается</li>
+                    <li>Не царапается</li>
+                    <li>Умеет разговаривать</li>
+                </ul>
+            </div>
+            <div>
+                <form action="https://github.com/konnomakotoo" 
+                style="display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-items: center;
+                margin: 5px 70px 20px;
+                ">
+                    <input type="text" placeholder="Имя" style="margin: 5px; font-size: 20px; border-radius: 10px;">
+                    <input type="text" placeholder="Кличка" style="margin: 5px; font-size: 20px; border-radius: 10px;">
+                    <input type="date" placeholder="" style="margin: 5px; font-size: 20px; border-radius: 10px;">
+                    <input type="tel" placeholder="Номер телефона" style="margin: 5px; font-size: 20px; border-radius: 10px;">
+                    <button type="submit" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+                    sans-serif;
+                  font-size: 20px;
+                  background-color:#ccc;
+                  padding: 10px 20px;
+                  border: none;
+                  border-radius: 15px;
+                  cursor: pointer;
+                  margin: 10px;
+                  ">
+                  Записаться
+                </button>
+                </form>
+            </div>
+        </div>
+        </div>
       </section>
+      <div style="text-align: center;">
+        <hr style="width: 50%; margin: 0 auto;">
+      </div>
       <section>
-        <h1>Вводный урок бесплатно</h1>
+        <h1 style="margin: 50px; text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" id="location">Как добраться?</h1>
+        <div style="display: flex;
+        justify-content: space-between;
+        align-items: center;">
+            <div style="width: 55%;
+            font-size: 20px;
+            text-align: center;
+            margin: 15px;
+            color: #2e2727;
+            ">
+            <div>
+                Мы находимся по адресу, указанному на карте. Добро пожаловать!
+            </div>
+            <div>
+                Мы рады приветствовать вас в нашей школе. Здесь вам помогут с любыми вопросами.
+            </div>
+            <div style="font-size: 15px; margin: 10px;">
+                P.S. это рофл, я НЕ поддерживаю зоопарки
+            </div>
+        </div>
+            <div style="margin: 40px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.727580340168!2d37.57402297678356!3d55.7632343911876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a319a6b68df%3A0xdc688507fe9ff595!2z0JzQvtGB0LrQvtCy0YHQutC40Lkg0LfQvtC-0L_QsNGA0Lo!5e0!3m2!1sru!2sru!4v1731775180045!5m2!1sru!2sru" 
+        width="600" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+</div>
       </section>
+      <div style="text-align: center;">
+        <hr style="width: 50%; margin: 0 auto;">
+      </div>
       <section>
-        <h1>Часто задаваемые вопросы</h1>
+        <h1 style="margin: 50px; text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" id="reviews">Отзывы</h1>
+        <div style="display: flex; justify-content: center; gap: 40px; margin-bottom: 50px;">
+            <div style="border: 1px solid black; text-align: center; border-radius: 20px; background-color: #2e2727; color: #ccc; text-shadow: 2px 2px 2px black;">
+                <div><img src="https://i.pinimg.com/236x/50/05/55/50055516e2f41e17e8181efdacba5efa.jpg" alt="dog in glasses" width="100px" style="border-radius: 50%; "></div>
+                <div>Бетховен</div>
+                <div>&#9734;&#9734;&#9734;&#9734;&#9734;</div>
+                <div>Исключительно приятное место<br>И всем советую</div>
+            </div>
+            <div style="border: 1px solid black; text-align: center; border-radius: 20px; background-color: #2e2727; color: #ccc; text-shadow: 2px 2px 2px black;">
+                <div><img src="https://funny.klev.club/smeh/uploads/posts/2024-04/funny-klev-club-mbwh-p-smeshnie-mishki-v-kartinkakh-25.jpg" alt="mouse" width="100px" style="border-radius: 50%; "></div>
+                <div>Норушка</div>
+                <div>&#9734;&#9734;&#9734;&#9734;</div>
+                <div style="padding: 0 10px 0 10px;">Тариф вместе очень удобный<br>Мои мышата все выучили</div>
+            </div>
+            <div style="border: 1px solid black; text-align: center; border-radius: 20px; background-color: #2e2727; color: #ccc; text-shadow: 2px 2px 2px black;">
+                <div><img src="https://ae01.alicdn.com/kf/S12a2b7a045c04bc78aa46a44de7319d33.jpg" alt="owl" width="100px" style="border-radius: 50%; "></div>
+                <div>Совенок</div>
+                <div>&#9734;&#9734;&#9734;&#9734;&#9734;</div>
+                <div>Мне очень даже зашло.Советую<br>Купил тариф на 2 года<br>Уже уровень у меня B1</div>
+            </div>
+        </div>
       </section>
     </main>
-    <footer style="border: 3px solid rgb(21, 39, 198)">про меня</footer>
+    <footer style="background-color: #817777;
+    color: #ccc;
+    text-shadow: 2px 2px 2px black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    padding: 7x;
+    ">
+    <div style="margin-right: 20px;"><img src="logo.png" alt="logo" width="50px" style="border-radius: 50%;"></div>
+    <div style="text-align: center; flex-grow: 1;">
+        <div>&copy; 2024 Все права защищены.</div>
+        <div>Контактная информация: <a href="https://github.com/konnomakotoo">@konnomakotoo</a></div>
+    </div>
+    </footer>
   </body>
 </html>
