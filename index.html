@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Школа английского языка</title>
+    <style>
+      input[type="radio"] {
+        display: none;
+      }
+      input[type="radio"]:checked + label {
+        background-color: rgb(52, 206, 38);
+        color: rgb(245, 245, 245);
+        border-color: brown;
+      }
+      .radio label {
+        display: inline-block;
+        padding: 15px 30px;
+        margin: 5px;
+        color: blue;
+        border: 2px solid #ccc;
+        font-size: 20px;
+        background-color: bisque;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <header
+      style="
+        border: 3px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-between;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20px;
+      "
+    >
+      <section>
+        <img
+          src="logo.png"
+          alt="logo"
+          style="
+            display: flex;
+            justify-content: flex-start;
+            width: 100px;
+            border-radius: 50%;
+            margin-left: 50px;
+          "
+        />
+      </section>
+      <section style="margin-right: 70px">Взрослым</section>
+      <section style="margin-right: 70px">Детям</section>
+      <section style="margin-right: 70px">Учителям</section>
+      <section style="margin-right: 70px">Другие курсы</section>
+      <section style="margin-right: 70px">
+        <button
+          style="
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+              sans-serif;
+            font-size: 20px;
+            background-color: rgb(203, 213, 93);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+          "
+        >
+          Записаться на урок
+        </button>
+      </section>
+    </header>
+    <nav
+      style="
+        border: 3px solid rgb(214, 25, 25);
+        display: flex;
+        justify-content: space-between;
+      "
+    >
+      <section style="flex: 0 0 800px">
+        <img
+          src="https://bannerplus.ru/files/img/pics/smeshnye-kartinki-s-zhivotnymi-na-avu/smeshnye-kartinki-s-zhivotnymi-na-avu-35.webp"
+          alt=""
+          style="width: 100%; height: auto"
+        />
+      </section>
+      <section
+        style="
+          flex-grow: 1;
+          border: 1px solid black;
+          background-color: blue;
+          text-align: center;
+        "
+      >
+        <h2>Что будет на консультации?</h2>
+        <section>
+          <ul style="list-style-position: inside">
+            <li>Определим ваш уровень языка</li>
+            <li>Поможем выбрать мотивирующую цель</li>
+            <li>Составим персональный план обучения</li>
+          </ul>
+        </section>
+        <section
+          style="display: flex; flex-direction: column; align-items: center"
+        >
+          <h3>Запишитесь на консультацию</h3>
+          <form action="https://github.com/konnomakotoo">
+            <div class="radio">
+              <input type="radio" id="adult" name="age" value="adult" />
+              <label for="adult">Взрослым</label>
+              <input type="radio" id="children" name="age" value="children" />
+              <label for="children">Детям</label>
+            </div>
+            <div
+              style="display: flex; flex-direction: column; align-items: center"
+            >
+              <div>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Имя"
+                  style="width: 90%; margin: 3px 0 0 0; padding: 10px"
+                />
+              </div>
+              <div>
+                <input
+                  type="tel"
+                  name="name"
+                  placeholder="Номер телефона"
+                  style="width: 90%; margin: 3px 0 0 0; padding: 10px"
+                />
+              </div>
+              <div>
+                <input
+                  type="email"
+                  name="name"
+                  placeholder="your@email.com"
+                  style="width: 90%; margin: 3px 0 0 0; padding: 10px"
+                />
+              </div>
+            </div>
+            <div
+              style="display: flex; flex-direction: column; align-items: center"
+            >
+              <button
+                type="submit"
+                style="
+                  padding: 10px;
+                  margin: 10px;
+                  background-color: rgb(223, 239, 47);
+                  border-radius: 15px;
+                  cursor: pointer;
+                "
+              >
+                Хочу на консультацию
+              </button>
+            </div>
+          </form>
+        </section>
+      </section>
+    </nav>
+    <main style="border: 3px solid rgb(34, 201, 101)">
+      <section>
+        <h1>Крутые преподы</h1>
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quo
+          quas hic laboriosam suscipit minima, id molestiae? Odio ipsa unde
+          culpa atque tempora tenetur error, minus rerum. Quis voluptatibus
+          assumenda esse ducimus quia architecto nesciunt eum. Quam corporis
+          aspernatur aliquam quibusdam iste voluptatem excepturi, exercitationem
+          modi vel dolorem. Iusto, explicabo.
+        </div>
+      </section>
+      <section>
+        <h1>Крутые дети</h1>
+      </section>
+      <section>
+        <h1>Сертификаты</h1>
+      </section>
+      <section>
+        <h1>Мобильное приложение</h1>
+      </section>
+      <section>
+        <h1>Курсы</h1>
+      </section>
+      <section>
+        <h1>Вводный урок бесплатно</h1>
+      </section>
+      <section>
+        <h1>Часто задаваемые вопросы</h1>
+      </section>
+    </main>
+    <footer style="border: 3px solid rgb(21, 39, 198)">про меня</footer>
+  </body>
+</html>
